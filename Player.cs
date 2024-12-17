@@ -18,7 +18,7 @@ namespace CS0402_RPGFramework
         }
 
         /// <summary>
-        /// Sends a message to the player
+        /// Sends a message to the player 
         /// </summary>
         /// <param name="message"></param>
         public void WriteLine(string message)
