@@ -16,5 +16,14 @@ namespace CS0402_RPGFramework
         {
             Network = new PlayerNetwork(client);
         }
+
+        /// <summary>
+        /// Sends a message to the player
+        /// </summary>
+        /// <param name="message"></param>
+        public void WriteLine(string message)
+        {
+            Network.Writer.WriteLine(message);
+        }
     }
 }
