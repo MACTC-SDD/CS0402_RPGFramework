@@ -5,10 +5,8 @@
 
         public static async Task Main(string[] args)
         {
-            
-            TelnetServer server = new TelnetServer(5555);
-
-            await server.StartAsync();
+            GameState gameState = GameState.Instance;
+            await gameState.Start();
         }
     }
 }

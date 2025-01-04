@@ -13,7 +13,6 @@ namespace CS0402_RPGFramework
         private TcpListener _listener;
         private bool _isRunning;
 
-
         public TelnetServer(int port)
         {
             _listener = new TcpListener(IPAddress.Any, port);
@@ -47,9 +46,10 @@ namespace CS0402_RPGFramework
 
                 try
                 {
+                    // Keep listening for commands as long as player is connected
                     while (client.Connected)
                     {
-                        string command = await player.Network.Reader.ReadLineAsync();
+                        string? command = await player.Network.Reader.ReadLineAsync();
                         if (command == null)
                             break;
 
