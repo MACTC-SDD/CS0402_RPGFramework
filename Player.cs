@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace CS0402_RPGFramework
 {
-    public class Player
+    public class Player : Character
     {
-        public string Name { get; set; } = "No Name Set";
         public PlayerNetwork Network { get; set; }
 
         public Player(TcpClient client)
